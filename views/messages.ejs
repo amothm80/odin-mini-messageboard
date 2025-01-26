@@ -1,0 +1,9 @@
+<% messages.map((message) => { %>
+<div class="message-card">
+  <div class="message"><%= message.text %></div>
+  <div class="message-card-footer">
+    <div class="user"><%= message.user %></div>
+    <div class="date"><%= message.added %></div>
+  </div>
+</div>
+<% }) %>
