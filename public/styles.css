@@ -94,3 +94,8 @@ form{
     gap: 2rem;
 
 }
+
+
+.err{
+  color:red
+}

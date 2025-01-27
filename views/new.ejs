@@ -11,9 +11,17 @@
     <div class="main">
       <form class="form-card" action="/new" method="POST">
         <label for="text">Message</label
-        ><textarea type="textarea" name="text" id="text" ></textarea>
+        ><textarea type="textarea" name="text" id="text"></textarea>
+        <% let error = errors.find((el)=>{return el.path == 'text'}) %> <%if
+        (error){ %>
+        <div class="err"><%= error.msg %></div>
+        <%}%>
         <label for="user">User</label
         ><input type="text" name="user" id="user" />
+        <%  error = errors.find((el)=>{return el.path == 'user'}) %> <%if
+        (error){ %>
+        <div class="err"><%= error.msg %></div>
+        <%}%>
         <input type="submit" value="Submit" />
       </form>
     </div>
